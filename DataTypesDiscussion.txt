@@ -1,0 +1,11 @@
+long data:  (cdi:LongData)
+	each row: unit , predicate(descriptor) , value.  Identifier and type are critical predicates to extract unit data. Value might be ref to another unit.
+	
+Massively flattend data  (variant on cdi:wideData)
+	unit unitType col1 col2 col3 col3.  Required columns dictated by unitType, col1 names might be paths in hierarchical structure, col might be reference to another unit(row) in the dataset.  Different rows might be different units.  Have to define root subject entity.
+	
+Cube (cdi:Dimensional)
+	Dimension arrays map to measure arrays,  measure array values might be objects (hierarchical, vector, grid(image)).  Unit is property of dataset
+	
+Simple columnar (cdi:WideDataset)
+	unit prop1 prop2 prop3 prop3...  each col is a variable applicable to unit, each row is same kind of unit.

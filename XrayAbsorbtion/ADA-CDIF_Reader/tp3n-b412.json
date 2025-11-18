@@ -1,0 +1,599 @@
+{
+    "@context": {
+        "ada": "https://ada.astromat.org/metadata/",
+        "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "schema": "https://schema.org/",
+        "spdx": "http://spdx.org/rdf/terms#"
+    },
+    "@id": "ada:record_2429",
+    "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+    "@type": [
+        "schema:Dataset",
+        "schema:Product"
+    ],
+    "prov:wasGeneratedBy": {
+        "@type": [
+            "schema:Event",
+            "xas:AnalysisEvent",
+            "prov:Activity"
+        ],
+        "prov:used": [
+            {
+                "@type": [
+                    "schema:Thing",
+                    "prov:Entity",
+                    "nxs:BaseClass/NXinstrument"
+                ],
+                "schema:identifier": "PRIME-AMS",
+                "schema:name": "Purdue Rare Isotope Measurement (PRIME) Lab AMS facility"
+            }
+        ],
+        "schema:identifier": "20240306_AMS_PU_multiSample_1",
+        "schema:location": {
+            "@type": [
+                "schema:Place",
+                "nxs:BaseClass/NXsource"
+            ],
+            "schema:alternateName": "PU",
+            "schema:identifier": "",
+            "schema:name": "Purdue University"
+        },
+        "schema:mainEntity": [
+            {
+                "@type": [
+                    "schema:Thing",
+                    "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+                ],
+                "schema:additionalType": [
+                    "MaterialSample"
+                ],
+                "schema:identifier": "OREX-803047-0"
+            }
+        ],
+        "schema:startDate": "2024-03-06T00:30:02.637164+00:00"
+    },
+    "schema:additionalType": [
+        "Accelerator Mass Spectrometry"
+    ],
+    "schema:contributor": [	
+        {
+            "@type": "schema:Role",
+            "schema:contributor": {
+                "@id": "https://ada.org/person/437",
+                "@type": "schema:Person",
+                "schema:email": "woodruft@purdue.edu",
+                "schema:identifier": "",
+                "schema:name": "Thomas Woodruff"
+            },
+            "schema:roleName": "Researcher"
+        },
+        {
+            "@type": "schema:Role",
+            "schema:contributor": {
+                "@id": "https://ada.org/person/437",
+                "@type": "schema:Person",
+                "schema:email": "mcaffee@purdue.edu",
+                "schema:identifier": "https://orcid.org/0000-0002-6846-8967",
+                "schema:name": "Caffee, Marc"
+            },
+            "schema:roleName": "Researcher"
+        }
+    ],
+    "schema:creator": [
+        {
+            "@id": "https://ada.org/person/5489",
+            "@type": "schema:Person",
+            "schema:email": "kcwelten@berkeley.edu",
+            "schema:identifier": "https://orcid.org/0000-0001-8577-6753",
+            "schema:name": "Welten, Kees"
+        }
+    ],
+    "schema:datePublished": "2025-12-31",
+    "schema:description": "Accelerator mass spectrometry analysis of 26Al concentrations in six sub-samples from aggregate sample OEX-803014-0. The samples include one bulk aggregate sample, OREX-803047-0, of almost 10 mg, and 5 individual mm-sized particles (OREX-803048-0, OREX-803049-0, OREX-803050-0, OREX-803051-0, OREX-803052-0), each one weighing less than 1 mg. For comparison, we also measured two aliquots of the Orgueil CI chondrite. Each sample was dissolved in HF/HNO3 and a small aliquot of the dissolved sample was taken for chemical analysis by ICP-OES. The 26Al concentrations in the particles range from ~20 to ~26 dpm/kg, compared to a 26Al concentration of ~21 dpm/kg in the aggregate sample. Combined with the 10Be data, these results constrain the cosmic-ray exposure age of the samples to at least a few Myr near the sufrace of asteroid Bennu.",
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload"
+            ],
+            "contentURL": "",
+            "description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+            "encodingFormat": "application/zip",
+            "schema:hasPart": [
+                {
+                    "@id": "#9e2f5b7fc4434a516c6e33f1fbafd64d",
+                    "@type": "schema:Dataset",
+                    "fileDetail": {
+                        "@type": [
+                            "cdi:PhysicalDataSet",
+                            "ada:tabularData"
+                        ],
+                        "cdi:isStructuredBy": {
+                            "@type": "cdi:WideDataStructure",
+                            "cdi:has_DataStructureComponent": [
+                                {
+                                    "@type": "cdi:IdentifierComponent", 
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 1,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#prime_id"
+                                    },
+                                    "schema:name": "PRIME_ID",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 2,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#sampleholder"
+                                    },
+                                    "schema:name": "Sample Holder",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 3,
+                                        "cdi:physicalDataType": "string"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#samplename"
+                                    },
+                                    "schema:name": "Sample Name",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 4,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#26al27alratio"
+                                    },
+                                    "schema:name": "26Al/27Al ratio",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 5,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#26al27alerror"
+                                    },
+                                    "schema:name": "26Al/27Al error",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 6,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#reluncertainty"
+                                    },
+                                    "schema:name": "Rel. Uncertainty",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 7,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#max27alcurrent"
+                                    },
+                                    "schema:name": "Max 27Al current",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 8,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#min27alcurrent"
+                                    },
+                                    "schema:name": "Min 27Al current",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 9,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#avg27alcurrent"
+                                    },
+                                    "schema:name": "Avg 27Al current",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 10,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#total26alcounts"
+                                    },
+                                    "schema:name": "Total 26Al counts",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 11,
+                                        "cdi:physicalDataType": "integer"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#intfcountrate"
+                                    },
+                                    "schema:name": "Intf count rate",
+                                    "cdi:unitOfMeasure": "counts per second (cps)"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 12,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#intf27al"
+                                    },
+                                    "schema:name": "Intf/27Al",
+                                    "cdi:unitOfMeasure": "counts per second per nano-Ampere (cps/nA)"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 13,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#26al27alcorrected"
+                                    },
+                                    "schema:name": "26Al/27Al-corrected",
+                                    "cdi:unitOfMeasure": "None"
+                                },
+                                {
+                                    "@type": "cdi:MeasureComponent",
+                                    "cdi:has": {
+                                        "@type": "cdi:ValueMapping",
+                                        "cdi:hasIndex": 14,
+                                        "cdi:physicalDataType": "decimal"
+                                    },
+                                    "cdi:isDefinedBy_InstanceVariable": {
+                                        "@id": "#err26"
+                                    },
+                                    "schema:name": "err26",
+                                    "cdi:unitOfMeasure": "None"
+                                }
+                            ]
+                        },
+                        "ada:componentType": "ada:AMSRawData",
+                        "ada:countColumns": 14,
+                        "cdi:countRows": 10,
+                        "cdi:headerRowCount": 8
+                    },
+                    "schema:description": "This file contains the raw 26Al AMS data for multiple samples analyzed in the same AMS run, including normalized 26Al/27Al ratios of each sample, along with the maximum, minimum and average 27Al current of each sample and the total number of 26Al ions counted in the detector. The file also shows the interference count rates in the detector, which is dominated by 26Mg ions and requires a small correction on the measured 26Al/27Al ratio. The last two columns show the interference-corrected 26Al/27Al ratio (and 1 sigma uncertainty) of the samples.",
+                    "schema:encodingFormat": "text/csv",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_AMSRawData_1.csv",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 1292
+                    },
+                    "spdx:checksum": "343fcbf8a46f8759d279f12c5d8105c86946ab7938290304d57e68e58c95a77a"
+                },
+                {
+                    "@id": "#d0a1c5a48fc8b2f99a384a6072e5027d",
+                    "@type": "schema:Dataset",
+                    "schema:about": [
+                        {
+                            "@id": "#9e2f5b7fc4434a516c6e33f1fbafd64d"
+                        }
+                    ],
+                    "schema:description": "",
+                    "schema:encodingFormat": "application/yaml",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_AMSRawData_1.yaml",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 2776
+                    },
+                    "spdx:checksum": "c8741f2af14f186e62384222f5690eb0ece4dc80dca5d0ada2aa78fcd9071047"
+                },
+                {
+                    "@id": "#8c717debc4352d38b5f80b1d3c7efef4",
+                    "@type": "schema:DigitalDocument",
+                    "schema:description": "Methods and Sample processing description",
+                    "schema:encodingFormat": "application/pdf",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_methodDescription_1.pdf",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 121600
+                    },
+                    "spdx:checksum": "4a3a15ed6a321cdebfef9fc46c0b8f2f63b601e8afc364005a3134395acb3d45"
+                },
+                {
+                    "@id": "#056029bb4aac55f5fc0b28919c3349c7",
+                    "@type": "schema:Dataset",
+                    "schema:about": [
+                        {
+                            "@id": "#8c717debc4352d38b5f80b1d3c7efef4"
+                        }
+                    ],
+                    "schema:description": "",
+                    "schema:encodingFormat": "application/yaml",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_methodDescription_1.yaml",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 262
+                    },
+                    "spdx:checksum": "1d78357a87641336145522a1b59d081c61b2423c85d2db48aed10350c1891c4d"
+                },
+                {
+                    "@id": "#3499968d5c59f411751c9c987e12c3a9",
+                    "@type": "schema:DigitalDocument",
+                    "schema:description": "Description of data processing for 26Al AMS data, including calculations to convert the normalized 26Al/27Al ratio to 26Al concentration (in atoms/g and dpm/kg) based on amount of sample dissolved and total amount of Al (from sample + carrier)",
+                    "schema:encodingFormat": "application/pdf",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_processingDescription_1.pdf",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 98084
+                    },
+                    "spdx:checksum": "68e3808bd5f6aaa294f08a4044d6198da681238da9489fadbb066df714558b9a"
+                },
+                {
+                    "@id": "#c5b29b57cdeac96a04ca85e3ba9e73d9",
+                    "@type": "schema:Dataset",
+                    "schema:about": [
+                        {
+                            "@id": "#3499968d5c59f411751c9c987e12c3a9"
+                        }
+                    ],
+                    "schema:description": "",
+                    "schema:encodingFormat": "application/yaml",
+                    "schema:name": "20240306_AMS_PU_multiSample_1_processingDescription_1.yaml",
+                    "schema:size": {
+                        "@type": "schema:QuantitativeValue",
+                        "schema:unitText": "byte",
+                        "schema:value": 404
+                    },
+                    "spdx:checksum": "5ba7601eb0ed298cb54aacf451b7cc83bdb8823dbe98716ee2647ba57dcd1a57"
+                }
+            ]
+        }
+    ],
+    "schema:funding": [
+        {
+            "@type": "schema:MonetaryGrant",
+            "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program. This study is supported by NASA grant 80NSSC22K1693 through the OREX-PSP."
+        }
+    ],
+    "schema:identifier": {
+        "@type": "schema:PropertyValue",
+        "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+        "url": "https://doi.org/10.60707/tp3n-b412",
+        "value": "10.60707/tp3n-b412"
+    },
+    "schema:measurementTechnique": {
+        "@type": "schema:DefinedTerm",
+        "schema:name": "Accelerator Mass Spectrometry",
+        "schema:termCode": "AMS"
+    },
+    "schema:name": "AMS, 26Al, particles and bulk aggregate sample of OREX-803014-0",
+    "schema:subjectOf": {	
+        "@id": "ada:metadata_2429",
+        "@type": "schema:Dataset",	
+        "dcterms:conformsTo": [
+            {
+                "@id": "ada:AMSRawData"
+            },
+            {
+                "@id": "ada:tabularData"
+            },
+            {
+                "@id": "ada:processingDescription"
+            },
+            {
+                "@id": "CDIF_basic_1.0"
+            },
+            {
+                "@id": "ada:document"
+            },
+            {
+                "@id": "ada:metadata"
+            },
+            {
+                "@id": "ada:methodDescription"
+            }
+        ],
+        "schema:about": {
+            "@id": "ada:record_2429"
+        },
+        "schema:creator": [
+            {
+                "@id": "https://ada.org/person/3479",
+                "@type": "schema:Person",
+                "schema:email": "smrTucson@email.org",
+                "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+                "schema:name": "Richard, Stephen M."
+            }
+        ],
+        "schema:dateModified": "2025-03-15",
+        "schema:description": "metadata about documentation for https://doi.org/10.60707/tp3n-b412"
+    },
+    "schema:url": "",
+    "schema:variableMeasured": [
+        {
+            "@id": "#prime_id",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "ID number of sample analyzed at PRIME lab",
+            "schema:name": "PRIME_ID",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#sampleholder",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "ID Number of cathode (sample holder)",
+            "schema:name": "Sample Holder",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#samplename",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "UC Berkeley sample ID",
+            "schema:name": "Sample Name",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#26al27alratio",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "Normalized 26Al/27Al ratio (10^-15)",
+            "schema:name": "26Al/27Al ratio",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#26al27alerror",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "1-sigma uncertainty in 26Al/27Al ratio (10^-15)",
+            "schema:name": "26Al/27Al error",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#reluncertainty",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "1-sigma uncertainty in 26Al/27Al ratio (%)",
+            "schema:name": "Rel. Uncertainty",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#max27alcurrent",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "Maximum 27Al current of the sample during the run (in nano-Ampere)",
+            "schema:name": "Max 27Al current",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#min27alcurrent",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "Minimum 27Al current of the sample during the run (in nano-Ampere)",
+            "schema:name": "Min 27Al current",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#avg27alcurrent",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "Average 27Al current of the sample during the run (in nano-Ampere)",
+            "schema:name": "Avg 27Al current",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#total26alcounts",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "total number of 26Al ion counts in gas ionization detector",
+            "schema:name": "Total 26Al counts",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#intfcountrate",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "interference count rate in gas ionization detector",
+            "schema:name": "Intf count rate",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#intf27al",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "ratio of interference count rate to average 27Al current",
+            "schema:name": "Intf/27Al",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#26al27alcorrected",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "Interference corrected 26Al/27Al ratio (10^-15)",
+            "schema:name": "26Al/27Al-corrected",
+            "schema:propertyID": [
+                "missing"
+            ]
+        },
+        {
+            "@id": "#err26",
+            "@type": "schema:PropertyValue",
+            "cdi:unitOfMeasureKind": "missing",
+            "schema:description": "1-sigma uncertainty in 26Al/27Al ratio (10^-15)",
+            "schema:name": "err26",
+            "schema:propertyID": [
+                "missing"
+            ]
+        }
+    ]
+}

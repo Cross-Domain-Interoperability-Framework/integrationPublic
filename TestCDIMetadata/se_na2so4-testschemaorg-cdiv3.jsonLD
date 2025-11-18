@@ -2,7 +2,7 @@
     "@context": [
         "https://docs.ddialliance.org/DDI-CDI/1.0/model/encoding/json-ld/ddi-cdi.jsonld",
         {
-            "schema": "https://schema.org/",
+            "schema": "http://schema.org/",
             "dcterms": "http://purl.org/dc/terms/",
             "geosparql": "http://www.opengis.net/ont/geosparql#",
             "spdx": "http://spdx.org/rdf/terms#",
@@ -22,6 +22,7 @@
             "schema:name": "X-ray absorption spectra for K edge, selenium in sodium selenate",
             "schema:description": "comment from xdi file: room temperature; measured at beamline 13-BM-D.  need a better description of what's in this datasset-- maybe the DCAT metadata has what we need?",
             "schema:identifier": "should have a DOI",
+            "schema:url":"https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
             "schema:contributor": [
                 {
                     "@type": "schema:Role",

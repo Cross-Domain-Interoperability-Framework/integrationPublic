@@ -1,0 +1,56 @@
+Ref Flavio's diagram https://drive.google.com/drive/folders/1qd-yPJ9XIupPj4AO5ge2W9b-kLLo_Ydc
+
+
+DataStore
+	characterSet -- add to dataset
+    then don't need datastore
+	
+Dataset: 
+	-need language of content; that might be handled in schema.org section
+	-recordCount-- isn't this a property of the Dataset, applies to any physicalDataset/distribution I would think.
+
+PhysicalDatasetStructure:
+	-specification-- we've been using dcterms:conformsTo to indicate specifications used by the distribution (physicalDataset) implementation.
+	
+DataStructureComponent--
+	? I'm not clear on the use cases for 'semantic' property.  I guess specialization is used to refine roles in more detail that 'Measure' or 'Dimension'.  Is there a SpecializationRole vocabulary somewhere? Looks like it generalizes GeoRole (geographic location?) and TimeRole (temporalExtent, publication, creation, validDate...?)
+
+
+StatisticsCollection should be navigable from InstanceVariable.  
+is StatisticsCollection Concrete or abstract?
+
+TextMapping fields from ValueMapping (renamed PhysicalMapping) (abstract class)
+	--defaultDecimalSeparator
+	--defaultDigitGroupSeparator
+	format (REGEX?)
+	
+	--numberPattern is redundant with format; keep format, remove numberPattern
+	should think about 'decimalPositions'; perhaps precision or 'significantDigits'would be more useful from a science/analytical perspective.  MaximumLength might otherwise do this.
+	
+InstanceVariable	
+	--platformType is it used?  Seems superfluous to me.
+	--physicalDataType. makes sense to have in instance variable -- integer, float, positive integer, string, etc.  The format in the ValueMapping (PhysicalMapping) will constrain the low-level details of how its represented (byte, short integer, long integer, decimal number string, exponent notation, 64 bit big endian, 32 bit little endian, fortran data types....)  so physicalDataType shouldn't be in PhysicalMapping. 
+	--source.  	is this ever used?  what is the intention? Guidance "Reference capturing provenance information." is not clear; provenance of what?.
+	-- Through inheritance, instanceVariable has 'definition' from RepresentedVariable, and 'definition' from Concept (as well as the very similar 'descriptiveText' from ConceptualVariable). 'identifier' from RepresentedVariable and 'identifier' from Concept. 'name' from RepresentedVariable, 'name' from Concept.  If the intention is that instances of these have different definition, identifier or name, then the attribute names in the model should be different. If not, the properties should go on the most general class, or subtyping is not the best relationship to use between these classes.
+		
+PhysicalMapping	
+	gets properties from ValueMapping except the ones moved to TextMapping.  Have to assume that the physicalDataType on InstanceVariable is sufficient to describe data types in JSON/XML/YAML serializations (text, but not tabular...). Remove physicalDataType (redundant with InstanceVariable)
+	--defaultValue should not be required
+	
+	
+NEEDS clarification.  I am interpreting that name on RepresentedVariable is used as the human-friendly label for the variable, and 'locator' in LocatorMapping or label in TextMapping is the string that identifies the variable in the physicalDataset.   
+
+PhysicalDataset
+	--allowsDuplicates.  remove
+	--numberOfSegments. remove?  won't include in CDIF profile...
+	--identifier is tricky. The DOI should identify the Dataset that the PhysicalDataset is a distribution of; I propose that physicalFileName should be physicalFileURL and that be considered the unique identifier for the physicalDataset, unless the distribution file has a DOI different from the dataset it represents.
+	--overview.  why not description?
+	
+Concept -- relation from Concept to Concept, is this supposed to represent concept hierarachy (I hope...) in which case the 'parent' and 'child' roles would be really good to assign. Either that or it should be an association class with a 'relationType' property. 
+
+Dataset
+	should a dataset have a name and description?
+	
+We need to align the CatalogDetails datatype with CDIF schema.org elements...
+
+I think it would be a good idea to give specific role names to navigable association ends.  'has' is ambiguous in this context; can we use names like 'hasMapping'???
